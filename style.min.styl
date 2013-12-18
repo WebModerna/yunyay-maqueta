@@ -4,13 +4,93 @@
 	margin 0
 	padding 0
 
-@import url(http://fonts.googleapis.com/css/?family=Righteous)
+@import url(http://fonts.googleapis.com/css?family=Righteous)
 
 /*Variables*/
+c = #1e6381
 letra = 16px
+naranja = #f60
+
+/*Junciones*/
+bordes()
+	border-radius arguments
+	-o-border-radius arguments
+	-ms-border-radius arguments
+	-moz-border-radius arguments
+	-webkit-border-radius arguments
+
+box-sizing()
+	box-sizing border-box
+	-o-box-sizing border-box
+	-ms-box-sizing border-box
+	-moz-box-sizing border-box
+	-webkit-box-sizing border-box
+
+transition()
+	transition all 1s ease-out
+	-o-transition all 1s ease-out
+	-ms-transition all 1s ease-out
+	-moz-transition all 1s ease-out
+	-webkit-transition all 1s ease-out
 
 /*Estilos a etiquetas*/
+a
+	color c
+	font-weight bold
+	text-decoration none
+	&:hover
+		color #f60
+
+article
+	background #eee
+	border thin solid c
+	bordes(0.6em)
+	font-family 'Righteous', Verdana
+	padding 1em 0
+
 body
 	font-family 'Verdana'
 	font-size letra
 	text-align center
+
+footer
+	border-top thin solid #57a88b
+	font-size .75em
+	padding 0.5em 0
+
+footer, header, article
+	background #ddd
+	box-sizing()
+	margin 0 auto
+	width 90%
+
+h1, nav
+	display inline-block
+	text-align left
+	Vertical-align middle
+	width 25%
+nav
+	font-size 1.3em
+	text-align right
+	width 70%
+	ul
+		list-style none
+	li
+		cursor 
+		display inline-block
+		vertical-align top
+		a
+			background #eee
+			border thin solid c
+			bordes(0.6em)
+			padding 0.5em
+			&:hover
+				background c
+				border thin solid naranja
+				bordes(0.75em 0.5em 1em 0)
+				color #eee
+
+
+/*Clases*/
+a
+	transition()
