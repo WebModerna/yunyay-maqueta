@@ -1,0 +1,10 @@
+﻿Cosas para hacer hoy:
+1. Ancho de img fijas en Los Robles. Listo!
+2. Footer_bg a yunyay. Listo!
+3. plantilla de blog y cabañas de yunyay
+4. Corrección del menú con JavaScript
+5. Calculadora web (No se hará porque Mauricio no quiere)
+	a. Interfaz de usuario. Front end.
+	b. Base de datos.
+	c. Panel de administración.
+	d. Programación. Back end.

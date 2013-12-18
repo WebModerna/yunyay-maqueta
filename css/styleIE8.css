@@ -1,0 +1,49 @@
+nav ul li, .navegacion div a, .servicios figcaption
+{
+	background: url(../img/transparent_1x1.png);
+}
+nav ul li a:hover
+{
+	background: #eee;
+}
+nav ul li ul
+{
+	margin-top: 1px;
+}
+table tr td, table caption, table thead tr th
+{
+	border: 1px solid #999;
+}
+#ventana
+{
+	display: none;
+}
+@media screen and (min-width: 1100px) {
+	nav ul li:hover ul
+	{
+		height: 420px !important;
+	}
+	#logo
+	{
+		background: transparent;
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#00000000',GradientType=0 );
+	}
+	#servicios
+	{
+		background: url(../img/4m.jpg) no-repeat top center fixed;
+	}
+	#servicios #slider
+	{
+		background: transparent url(../img/transparent_1x1.png);
+	}
+	#servicios #slider div
+	{
+		display: inline-block;
+		width: 45%;
+		vertical-align: top;
+	}
+	#servicios #slider div ul
+	{
+		
+	}
+}
