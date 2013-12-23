@@ -11,18 +11,10 @@
 	<!--<link href='http://fonts.googleapis.com/css?family=Raleway:200' rel='stylesheet' type='text/css'>-->
 	<link type="text/css" rel="stylesheet" href="style.css">
 
-
-
-	<link rel="stylesheet" type="text/css" href="/src/css/jscal2.css" />
-    <link rel="stylesheet" type="text/css" href="/src/css/border-radius.css" />
-    <link rel="stylesheet" type="text/css" href="/src/css/steel/steel.css" />
-    <script type="text/javascript" src="/src/js/jscal2.js"></script>
-    <script type="text/javascript" src="/src/js/lang/es.js"></script>
-	
 	<!--[if IE 8]>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<script type="text/javascript" src="js/html5.js"></script>
-	<script type="text/javascript" src="js/css3-mediaqueries.js"></script>
+	<script type="text/javascript" src="js/respond.js"></script>
 	<script type="text/javascript" src="js/selectivizr-min.js"></script>
 	<link type="text/css" rel="stylesheet" href="css/styleIE8.css" />
 	<![endif]-->	
@@ -51,43 +43,6 @@
 	<!-- Favicon común -->
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 
-<script type="text/javascript">//<![CDATA[
-
-Calendar.setup({
-    cont          : "calendar-container",
-    weekNumbers   : false,
-    trigger    : "dia_llegada",
-    inputField : "dia_llegada",
-    selectionType : Calendar.SEL_MULTIPLE,
-    selection     : Calendar.dateToInt(new Date()),
-    showTime      : 24,
-    onSelect      : function() {
-        var count = this.selection.countDays();
-        if (count == 1) {
-            var date = this.selection.get()[0];
-            date = Calendar.intToDate(date);
-            date = Calendar.printDate(date, "%A, %B %d, %Y");
-            $("#dia_llegada").innerHTML = date;
-        } else {
-            $("calendar-info").innerHTML = Calendar.formatString(
-                "${count:no date|one date|two dates|# dates} selected",
-                { count: count }
-            );
-        }
-    },
-    onTimeChange  : function(cal) {
-        var h = cal.getHours(), m = cal.getMinutes();
-        // zero-pad them
-        if (h < 10) h = "0" + h;
-        if (m < 10) m = "0" + m;
-        $("calendar-info").innerHTML = Calendar.formatString("Time changed to ${hh}:${mm}", {
-            hh: h,
-            mm: m
-        });
-    }
-});
-
-//]]></script>
 </head>
 <body>
 	<div id="contenedor">
@@ -139,13 +94,6 @@ Calendar.setup({
 								<option value="Dos dormitorios">Dos dormitorios</option>
 							</select>
 							<h4>Fecha de Llegada</h4>
-
-							<input type="text" name="dia_llegada" id="dia_llegada" />
-
-
-
-
-
 							<select id="diallegada" name="diallegada">
 								<option value="" selected="selected">Día</option>
 								<option value="1">1</option>
@@ -285,7 +233,11 @@ Calendar.setup({
 						</form>
 					</div>
 				</div><!-- #slider -->
-				<div class="footer_bg"></div>
+				<div class="footer_bg">
+					<!--[if IE 8]>
+						<img src="img/footer_bg.png" alt="imagen de fondo" />
+					<![endif]-->
+				</div>
 				<div id="mensaje">Un lugar tranquilo y agradable... :-)</div>
 			</article><!-- #contacto -->
 		</section>

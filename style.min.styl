@@ -1,23 +1,45 @@
-/*Primeros usos con stylus*/
-*
-	border 0
-	margin 0
-	padding 0
+/* Yunyay */
+/* Pre-render */
+@import url('css/normalize.css')
+@font-face 
+  font-family 'Raleway'
+  src url('fuentes/raleway.eot')
+  src local('Raleway')
+  	url('fuentes/raleway.eot') format('embedded-opentype')
+  	url('fuentes/raleway.woff') format('woff')
+  	url('fuentes/raleway.ttf') format('truetype')
+  	url('fuentes/raleway.svg#Raleway') format('svg')
 
-@import url(http://fonts.googleapis.com/css?family=Righteous)
+@font-face 
+  font-family 'Open Sans'
+  font-style normal
+  font-weight 400
+  src url('fuentes/open-sans.eot')
+  src local('OpenSans')
+  	url('fuentes/open-sans.eot') format('embedded-opentype')
+  	url('fuentes/open-sans.ttf') format('truetype')
+  	url('fuentes/open-sans.svg#OpenSans') format('svg')
+  	url('fuentes/open-sans.woff') format('woff')
 
 /*Variables*/
 c = #1e6381
 letra = 16px
 naranja = #f60
 
-/*Junciones*/
+/* Funciones para reutilizarse */
 bordes()
 	border-radius arguments
 	-o-border-radius arguments
 	-ms-border-radius arguments
 	-moz-border-radius arguments
 	-webkit-border-radius arguments
+
+box-shadow_boton()
+	box-shadow 0px 1px 0px 0px rgba(255,255,255,0.5) inset	0px -15px 15px 0px rgba(0,0,0,0.25) inset
+	-o-box-shadow 0px 1px 0px 0px rgba(255,255,255,0.5) inset  0px -15px 15px 0px rgba(0,0,0,0.25) inset
+	-ms-box-shadow 0px 1px 0px 0px rgba(255,255,255,0.5) inset	0px -15px 15px 0px rgba(0,0,0,0.25) inset
+	-moz-box-shadow 0px 1px 0px 0px rgba(255,255,255,0.5) inset	0px -15px 15px 0px rgba(0,0,0,0.25) inset
+	-webkit-box-shadow 0px 1px 0px 0px rgba(255,255,255,0.5) inset	0px -15px 15px 0px rgba(0,0,0,0.25) inset
 
 box-sizing()
 	box-sizing border-box
@@ -26,71 +48,45 @@ box-sizing()
 	-moz-box-sizing border-box
 	-webkit-box-sizing border-box
 
-transition()
-	transition all 1s ease-out
-	-o-transition all 1s ease-out
-	-ms-transition all 1s ease-out
-	-moz-transition all 1s ease-out
-	-webkit-transition all 1s ease-out
+text-shadow_undido()
+	text-shadow 0px -1px 0px rgba(0,0,0,0.25)
+	-o-text-shadow 0px -1px 0px rgba(0,0,0,0.25)
+	-ms-text-shadow 0px -1px 0px rgba(0,0,0,0.25)
+	-moz-text-shadow 0px -1px 0px rgba(0,0,0,0.25)
+	-webkit-text-shadow 0px -1px 0px rgba(0,0,0,0.25)
 
-/*Estilos a etiquetas*/
-a
-	color c
-	font-weight bold
-	text-decoration none
-	&:hover
-		color #f60
+transform_rotate()
+	transform rotate(arguments)
+	-o-transform rotate(arguments)
+	-ms-transform rotate(arguments)
+	-moz-transform rotate(arguments)
+	-webkit-transform rotate(arguments)
 
+transition_ease_out()
+	transition arguments ease-in-out
+	-o-transition arguments ease-in-out
+	-ms-transition arguments ease-in-out
+	-moz-transition arguments ease-in-out
+	-webkit-transition arguments ease-in-out
+
+transition_cubic()
+	transition arguments cubic-bezier(0.64, -0.37, 0.46, 1.55)
+	-o-transition arguments cubic-bezier(0.64, -0.37, 0.46, 1.55)
+	-ms-transition arguments cubic-bezier(0.64, -0.37, 0.46, 1.55)
+	-moz-transition arguments cubic-bezier(0.64, -0.37, 0.46, 1.55)
+	-webkit-transition arguments cubic-bezier(0.64, -0.37, 0.46, 1.55)
+
+
+
+
+/* Estilos a etiquetas */
 article
-	background #eee
-	border thin solid c
-	bordes(0.6em)
-	font-family 'Righteous', Verdana
-	padding 1em 0
+	background c
+	transition_cubic(all 2.4s)
+	&:hover
+		transform_rotate(390deg)
+		background red
 
-body
-	font-family 'Verdana'
-	font-size letra
-	text-align center
+/* ID */
 
-footer
-	border-top thin solid #57a88b
-	font-size .75em
-	padding 0.5em 0
-
-footer, header, article
-	background #ddd
-	box-sizing()
-	margin 0 auto
-	width 90%
-
-h1, nav
-	display inline-block
-	text-align left
-	Vertical-align middle
-	width 25%
-nav
-	font-size 1.3em
-	text-align right
-	width 70%
-	ul
-		list-style none
-	li
-		cursor 
-		display inline-block
-		vertical-align top
-		a
-			background #eee
-			border thin solid c
-			bordes(0.6em)
-			padding 0.5em
-			&:hover
-				background c
-				border thin solid naranja
-				bordes(0.75em 0.5em 1em 0)
-				color #eee
-
-
-/*Clases*/
-a
-	transition()
+/* Clases */
