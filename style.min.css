@@ -1,5 +1,0 @@
-@import url("css/normalize.css");
-@font-face{font-family:'Raleway';src:url("fuentes/raleway.eot");}
-@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:url("fuentes/open-sans.eot");}
-article{background:#1e6381;transition:all 2.4s cubic-bezier(.64,-.37,.46,1.55);-o-transition:all 2.4s cubic-bezier(.64,-.37,.46,1.55);-ms-transition:all 2.4s cubic-bezier(.64,-.37,.46,1.55);-moz-transition:all 2.4s cubic-bezier(.64,-.37,.46,1.55);-webkit-transition:all 2.4s cubic-bezier(.64,-.37,.46,1.55);}
-article:hover{transform:rotate(390deg);-o-transform:rotate(390deg);-ms-transform:rotate(390deg);-moz-transform:rotate(390deg);-webkit-transform:rotate(390deg);background:#f00}
